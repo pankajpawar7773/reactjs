@@ -1,6 +1,7 @@
 import React,{useState,Suspense} from 'react';
 import ChildComponent from './ChildComponent';
 import CounterComponent from './CounterComponent';
+import Fragments from './Fragments';
 // import FetchData from './FetchData';
 const FetchData = React.lazy(()=>import('./FetchData'));
 function App() {
@@ -17,7 +18,8 @@ function App() {
     {/* <CounterComponent/> */}
     {/* <p>Your Name is :{name}</p> */}
     {/* <ChildComponent handleInput={handleInput}/> */}
-    <Suspense fallback={<div>Content is Loading..!</div>}><FetchData/></Suspense>
+    {/* <Suspense fallback={<div>Content is Loading..!</div>}><FetchData/></Suspense> */}
+    <Fragments/>
     </>
   );
 }
